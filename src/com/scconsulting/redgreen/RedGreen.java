@@ -12,21 +12,19 @@ import android.widget.RelativeLayout;
 public class RedGreen extends Activity {
 
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.red_green);
         
         // Get the root view in our layout.
         // The root view is a RelativeLayout, to which we assigned the ID "layout",
         //    so we can get this view with "findViewById(R.id.layout)".     
-        final RelativeLayout layout =
-        		(RelativeLayout) findViewById(R.id.layout);
+        final RelativeLayout layout = (RelativeLayout) findViewById(R.id.layout);
         
         // We will use the WindowManager to change the screen brightness.
         // We need to set a parameter in the WindowManager that determines screen brightness,
         //    so we will get the WindowManager's "LayoutParams".
-        final WindowManager.LayoutParams layoutParams = 
-        		this.getWindow().getAttributes();
+        final WindowManager.LayoutParams layoutParams = this.getWindow().getAttributes();
                 
         // Get a handle, or a way to reference, the first button in our layout.
         // The first button has the ID "button1",
@@ -45,8 +43,8 @@ public class RedGreen extends Activity {
 				layout.setBackgroundColor(Color.RED);
 				
 				// Set the screen brightness to its highest brightness, using the value 1.0.
-            	layoutParams.screenBrightness = 1.0F;
-            	getWindow().setAttributes(layoutParams);
+				layoutParams.screenBrightness = 1.0F;
+				getWindow().setAttributes(layoutParams);
 				
 			}
 		});
@@ -56,6 +54,7 @@ public class RedGreen extends Activity {
             
         	@Override
         	public void onClick(View view) {
+        		
             	layout.setBackgroundColor(Color.GREEN);
             	layoutParams.screenBrightness = 1.0F;
             	getWindow().setAttributes(layoutParams);
@@ -67,9 +66,9 @@ public class RedGreen extends Activity {
         buttonwhite.setOnClickListener(new View.OnClickListener() {
         	
         	@Override
-            public void onClick(View view) {
+        	public void onClick(View view) {
             	
-            	layout.setBackgroundColor(Color.WHITE);
+        		layout.setBackgroundColor(Color.WHITE);
             	layoutParams.screenBrightness = 1.0F;
             	getWindow().setAttributes(layoutParams);
             	
@@ -80,7 +79,7 @@ public class RedGreen extends Activity {
         buttonnorm.setOnClickListener(new View.OnClickListener() {
         	
         	@Override
-            public void onClick(View view) {
+        	public void onClick(View view) {
         		
             	layout.setBackgroundColor(Color.WHITE);
             	

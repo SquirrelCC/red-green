@@ -9,6 +9,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".RedGreen"
     android:background="@android:color/white" >
+    <!-- The RelativeLayout above is the root, or main View in the layout file: red_green.xml -->
+    <!-- This View fills the screen on the Android device. -->
+    <!-- We added an ID, with the name "layout", to this root View so that we can reference it in the Activity. -->
+    <!-- We also set the background color to white. -->
 
     <!-- Set the text color to red -->
     <Button
