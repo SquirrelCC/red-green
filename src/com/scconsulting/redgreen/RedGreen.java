@@ -89,8 +89,7 @@ public class RedGreen extends Activity {
 	            
 	        	}
 	        });
- 
-	}
+ 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -98,5 +97,4 @@ public class RedGreen extends Activity {
 		getMenuInflater().inflate(R.menu.red_green, menu);
 		return true;
 	}
-
 }
